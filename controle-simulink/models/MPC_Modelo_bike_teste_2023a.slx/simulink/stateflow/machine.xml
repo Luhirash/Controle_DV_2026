@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Stateflow>
+  <machine id="12">
+    <P Name="sfVersion">82600000</P>
+    <Children>
+      <target id="37" name="sfun">
+        <P Name="description">Default Simulink S-Function Target.</P>
+      </target>
+      <target id="38" name="rtw"/>
+      <chart Ref="chart_13"/>
+      <chart Ref="chart_20"/>
+      <chart Ref="chart_27"/>
+    </Children>
+  </machine>
+  <instance id="19">
+    <P Name="machine">12</P>
+    <P Name="name">Subsystem/MATLAB Function</P>
+    <P Name="chart">13</P>
+  </instance>
+  <instance id="26">
+    <P Name="machine">12</P>
+    <P Name="name">Reference Data/MATLAB Function</P>
+    <P Name="chart">20</P>
+  </instance>
+  <instance id="36">
+    <P Name="machine">12</P>
+    <P Name="name">Estimate Lane Center/Preview Curvature</P>
+    <P Name="chart">27</P>
+  </instance>
+</Stateflow>

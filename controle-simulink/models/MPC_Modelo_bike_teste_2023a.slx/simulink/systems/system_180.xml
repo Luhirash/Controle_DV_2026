@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1856, 959]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">117</P>
+  <Block BlockType="Inport" Name="delta" SID="181">
+    <P Name="Position">[-120, 143, -90, 157]</P>
+    <P Name="ZOrder">100000</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">assisted_steer</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion" SID="525">
+    <P Name="Position">[265, 143, 340, 177]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutDataTypeStr">double</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="182">
+    <P Name="Position">[110, 95, 150, 125]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">AnL</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="183">
+    <P Name="Position">[110, 210, 150, 240]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">AnR</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Concatenate" Name="Matrix&#xA;Concatenate" SID="184">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[100, 139, 155, 181]</P>
+    <P Name="ZOrder">26658</P>
+  </Block>
+  <Block BlockType="Outport" Name="AnF" SID="185">
+    <P Name="Position">[415, 153, 445, 167]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">181#out:1</P>
+    <P Name="Points">[143, 0]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Dst">184#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, 20]</P>
+      <Branch>
+        <P Name="ZOrder">4</P>
+        <P Name="Dst">184#in:2</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">5</P>
+        <P Name="Points">[0, 55]</P>
+        <P Name="Dst">183#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[0, -40]</P>
+      <P Name="Dst">182#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">184#out:1</P>
+    <P Name="Dst">525#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">525#out:1</P>
+    <P Name="Dst">185#in:1</P>
+  </Line>
+</System>

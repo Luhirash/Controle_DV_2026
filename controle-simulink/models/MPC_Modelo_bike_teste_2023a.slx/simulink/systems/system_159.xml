@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1033]</P>
+  <P Name="ZoomFactor">50</P>
+  <Block BlockType="Inport" Name="InertXYZ" SID="160">
+    <P Name="Position">[285, 18, 315, 32]</P>
+    <P Name="ZOrder">100000</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">InertCGDisp</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="InertAng" SID="161">
+    <P Name="Position">[285, 73, 315, 87]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">2</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">InertCGDisp</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="InertXdotYdotZdot" SID="162">
+    <P Name="Position">[285, 128, 315, 142]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">3</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">InertCGVel</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="WhlAng" SID="163">
+    <P Name="Position">[285, 183, 315, 197]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">4</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">WhlAng</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="RefXYZ" SID="164">
+    <P Name="Position">[285, 238, 315, 252]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion" SID="165">
+    <P Name="Position">[240, 283, 315, 317]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutDataTypeStr">double</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition1" SID="166">
+    <P Name="Position">[390, 4, 430, 46]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition2" SID="167">
+    <P Name="Position">[390, 59, 430, 101]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition3" SID="168">
+    <P Name="Position">[390, 224, 430, 266]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition4" SID="169">
+    <P Name="Position">[390, 114, 430, 156]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition5" SID="170">
+    <P Name="Position">[390, 169, 430, 211]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition6" SID="171">
+    <P Name="Position">[390, 279, 430, 321]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="RateTransition" Name="Rate Transition7" SID="172">
+    <P Name="Position">[390, 334, 430, 376]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="Deterministic">off</P>
+    <P Name="OutPortSampleTime">pltDT</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape" SID="173">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[295, 333, 325, 357]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutputDimensionality">Row vector (2-D)</P>
+  </Block>
+  <Block BlockType="Reshape" Name="Reshape1" SID="174">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[295, 353, 325, 377]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutputDimensionality">Row vector (2-D)</P>
+  </Block>
+  <Block BlockType="Ground" Name="Stats Ground" SID="175">
+    <P Name="Position">[135, 293, 165, 307]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Ground" Name="TireFx Ground" SID="176">
+    <P Name="Position">[135, 338, 165, 352]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Ground" Name="TireFy Ground" SID="177">
+    <P Name="Position">[135, 373, 165, 387]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Concatenate" Name="Vector&#xA;Concatenate" SID="178">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[350, 336, 355, 374]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Mode">Multidimensional array</P>
+  </Block>
+  <Block BlockType="Reference" Name="Vehicle XY Plotter" SID="179">
+    <PortCounts in="5"/>
+    <P Name="Position">[495, -1, 700, 381]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="LibraryVersion">13.0</P>
+    <P Name="SourceBlock">vehdynlibviscommon/Vehicle XY Plotter</P>
+    <P Name="SourceType">Vehicle XY Plotter</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="w">w</P>
+      <P Name="a">a</P>
+      <P Name="b">b</P>
+      <P Name="tireFMin">tireFMin</P>
+      <P Name="figBorder">figBorder</P>
+      <P Name="bufferSize">bufferSize</P>
+      <P Name="extStats">off</P>
+      <P Name="extTireF">off</P>
+    </InstanceData>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">177#out:1</P>
+    <P Name="Points">[60, 0; 0, -15]</P>
+    <P Name="Dst">174#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">176#out:1</P>
+    <P Name="Points">[120, 0]</P>
+    <P Name="Dst">173#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">175#out:1</P>
+    <P Name="Points">[65, 0]</P>
+    <P Name="Dst">165#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">InertCGDisp</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">161#out:1</P>
+    <P Name="Dst">167#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">InertCGVel</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Labels">[1, 0]</P>
+    <P Name="Src">162#out:1</P>
+    <P Name="Dst">169#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">InertCGDisp</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">160#out:1</P>
+    <P Name="Dst">166#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">WhlAng</P>
+    <P Name="ZOrder">7</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">163#out:1</P>
+    <P Name="Dst">170#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">168#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">179#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">166#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">179#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">167#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">179#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">169#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">179#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">170#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">179#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">171#out:1</P>
+    <P Name="Points">[55, 0]</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">165#out:1</P>
+    <P Name="Dst">171#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">172#out:1</P>
+    <P Name="Points">[55, 0]</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">164#out:1</P>
+    <P Name="Points">[65, 0]</P>
+    <P Name="Dst">168#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">173#out:1</P>
+    <P Name="Dst">178#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">174#out:1</P>
+    <P Name="Dst">178#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">178#out:1</P>
+    <P Name="Dst">172#in:1</P>
+  </Line>
+</System>

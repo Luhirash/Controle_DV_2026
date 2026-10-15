@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[70, 27, 1920, 1080]</P>
+  <P Name="ZoomFactor">175</P>
+  <Block BlockType="Inport" Name="distance" SID="250">
+    <P Name="Position">[-70, 113, -40, 127]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="251">
+    <P Name="Position">[80, 80, 110, 110]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="252">
+    <P Name="Position">[80, 130, 110, 160]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="253">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-5, 105, 25, 135]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="InitialCondition">sqrt((X_o).^2+(Y_o).^2)</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="254">
+    <P Name="Position">[150, 80, 215, 160]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Threshold">gradbp(end)+sqrt((X_o).^2+(Y_o).^2)</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="stop" SID="255">
+    <P Name="Position">[290, 113, 320, 127]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="NameLocation">top</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">254#out:1</P>
+    <P Name="Dst">255#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">252#out:1</P>
+    <P Name="Dst">254#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">250#out:1</P>
+    <P Name="Dst">253#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">251#out:1</P>
+    <P Name="Dst">254#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">253#out:1</P>
+    <P Name="Dst">254#in:2</P>
+  </Line>
+</System>

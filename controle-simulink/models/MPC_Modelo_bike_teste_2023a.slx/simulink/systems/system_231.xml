@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[515, 21, 1247, 648]</P>
+  <Block BlockType="Inport" Name="y" SID="232">
+    <P Name="Position">[50, 52, 80, 68]</P>
+    <P Name="ZOrder">1</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">yRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="x" SID="233">
+    <P Name="Position">[50, 102, 80, 118]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">2</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">xRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="dis" SID="234">
+    <P Name="Position">[50, 152, 80, 168]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="235">
+    <P Name="Position">[100, 50, 120, 70]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="236">
+    <P Name="Position">[100, 100, 120, 120]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="Theta Ref" SID="237">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[175, 78, 240, 142]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">gradbp</P>
+    <P Name="Table">thetaRefs</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Outport" Name="theta" SID="238">
+    <P Name="Position">[305, 102, 335, 118]</P>
+    <P Name="ZOrder">4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">237#out:1</P>
+    <P Name="Dst">238#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">234#out:1</P>
+    <P Name="Points">[63, 0; 0, -50]</P>
+    <P Name="Dst">237#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">233#out:1</P>
+    <P Name="Dst">236#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">232#out:1</P>
+    <P Name="Dst">235#in:1</P>
+  </Line>
+  <Annotation SID="240">
+    <P Name="Name">Check out the script &quot;setUpModel&quot; to understand how we have calculated theta</P>
+    <P Name="Position">[32, 227, 382, 242]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="239">
+    <P Name="Name">theta based on lookup table</P>
+    <P Name="Position">[145, 191, 269, 206]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-2</P>
+  </Annotation>
+</System>

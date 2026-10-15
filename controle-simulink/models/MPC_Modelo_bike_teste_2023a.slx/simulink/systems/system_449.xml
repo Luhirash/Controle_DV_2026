@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[223, 338, 826, 833]</P>
+  <P Name="SIDHighWatermark">63</P>
+  <Block BlockType="Inport" Name="Curvature0" SID="449::22">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">13</P>
+  </Block>
+  <Block BlockType="Inport" Name="dCurvature" SID="449::23">
+    <P Name="Position">[20, 136, 40, 154]</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="Vx" SID="449::25">
+    <P Name="Position">[20, 171, 40, 189]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="449::62">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[270, 230, 320, 270]</P>
+    <P Name="ZOrder">51</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="449::61">
+    <P Name="Tag">Stateflow S-Function 10</P>
+    <PortCounts in="3" out="2"/>
+    <P Name="Position">[180, 100, 230, 180]</P>
+    <P Name="ZOrder">50</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="Parameters">PredictionHorizon</P>
+    <P Name="PortCounts">[3 2]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">off</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="Name">rho</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="449::63">
+    <P Name="Position">[460, 241, 480, 259]</P>
+    <P Name="ZOrder">52</P>
+  </Block>
+  <Block BlockType="Outport" Name="rho" SID="449::5">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">-5</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">449::22#out:1</P>
+    <P Name="Dst">449::61#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">449::23#out:1</P>
+    <P Name="Dst">449::61#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">449::25#out:1</P>
+    <P Name="Dst">449::61#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">rho</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">449::61#out:2</P>
+    <P Name="Dst">449::5#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">449::62#out:1</P>
+    <P Name="Dst">449::63#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">449::61#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <P Name="Dst">449::62#in:1</P>
+  </Line>
+</System>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[70, 27, 1920, 1080]</P>
+  <P Name="ZoomFactor">300</P>
+  <Block BlockType="Inport" Name="curvature" SID="462">
+    <P Name="Position">[110, 103, 140, 117]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Sum" Name="Add" SID="463">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[290, 157, 320, 188]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="IconShape">rectangular</P>
+    <P Name="Inputs">+-</P>
+  </Block>
+  <Block BlockType="UnitDelay" Name="Unit Delay" SID="464">
+    <P Name="Position">[185, 163, 220, 197]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="SampleTime">-1</P>
+  </Block>
+  <Block BlockType="Outport" Name="dcurvature" SID="465">
+    <P Name="Position">[430, 103, 460, 117]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">462#out:1</P>
+    <P Name="Points">[19, 0; 0, 32]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Points">[91, 0; 0, 23]</P>
+      <P Name="Dst">463#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, 38]</P>
+      <P Name="Dst">464#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">464#out:1</P>
+    <P Name="Dst">463#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">463#out:1</P>
+    <P Name="Points">[47, 0; 0, -65]</P>
+    <P Name="Dst">465#in:1</P>
+  </Line>
+</System>

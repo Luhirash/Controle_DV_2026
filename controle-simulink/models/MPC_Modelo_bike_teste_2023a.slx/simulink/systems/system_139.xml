@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[8, 8, 1930, 1049]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">70</P>
+  <Block BlockType="Inport" Name="Inport" SID="140">
+    <P Name="Position">[30, 43, 60, 57]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="141">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[160, 271, 165, 309]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="InheritFromInputs">on</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector" SID="142">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[220, 271, 225, 309]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutputSignals">xRef,yRef,signal3</P>
+    <P Name="OutputAsBus">on</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector1" SID="143">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[320, 84, 325, 116]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="OutputSignals">InertFrm.Cg.Ang.phi,InertFrm.Cg.Ang.theta,InertFrm.Cg.Ang.psi</P>
+    <P Name="OutputAsBus">on</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector6" SID="144">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[320, 34, 325, 66]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="OutputSignals">InertFrm.Geom.Disp.X,InertFrm.Geom.Disp.Y,InertFrm.Geom.Disp.Z</P>
+    <P Name="OutputAsBus">on</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector7" SID="145">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[320, 134, 325, 166]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <P Name="OutputSignals">InertFrm.Geom.Vel.Xdot,InertFrm.Geom.Vel.Ydot,InertFrm.Geom.Vel.Zdot</P>
+    <P Name="OutputAsBus">on</P>
+  </Block>
+  <Block BlockType="BusToVector" Name="Bus to Vector" SID="146">
+    <P Name="Position">[345, 35, 365, 65]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="BusToVector" Name="Bus to Vector1" SID="147">
+    <P Name="Position">[345, 135, 365, 165]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="BusToVector" Name="Bus to Vector2" SID="148">
+    <P Name="Position">[345, 85, 365, 115]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="BusToVector" Name="Bus to Vector4" SID="149">
+    <P Name="Position">[315, 268, 355, 312]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="150">
+    <P Name="Position">[-45, 250, -5, 280]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">xRef</P>
+    <P Name="TagVisibility">global</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">xRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="151">
+    <P Name="Position">[30, 150, 70, 180]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">AnL</P>
+    <P Name="TagVisibility">global</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">assisted_steer</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="152">
+    <P Name="Position">[30, 180, 70, 210]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">AnR</P>
+    <P Name="TagVisibility">global</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">assisted_steer</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="153">
+    <P Name="Position">[-45, 320, -5, 350]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">yRef</P>
+    <P Name="TagVisibility">global</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">yRef</P>
+        <P Name="PropagatedSignals">yref</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Gain" Name="Gain" SID="154">
+    <P Name="Position">[80, 350, 110, 380]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Gain">0</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground3" SID="155">
+    <P Name="Position">[90, 210, 110, 230]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Concatenate" Name="Vector&#xA;Concatenate" SID="156">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[145, 156, 150, 194]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">FrontWheelAngles</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Concatenate" Name="Vector&#xA;Concatenate1" SID="157">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[280, 152, 285, 243]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Concatenate" Name="Vector&#xA;Concatenate2" SID="158">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[145, 200, 150, 240]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ShowName">off</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">RearWheelAngles</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="SubSystem" Name="Vehicle XY Plotter1" SID="159">
+    <PortCounts in="5"/>
+    <P Name="Position">[600, 48, 685, 262]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.835294, 0.835294, 0.835294]</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Mask>
+      <Type>Vehicle XY Plotter</Type>
+      <Display RunInitForIconRedraw="off"/>
+      <Description>This block will display a MATLAB figure which indicates the vehicle path, current position and heading velocity.
+An optional path reference is also provided.</Description>
+      <Initialization>block = gcb;
+if autoblkschecksimstopped(block)
+    ParamNames = {&apos;extRef&apos;;&apos;extStats&apos;;&apos;extTireF&apos;;&apos;extTireF&apos;};
+    PortNames = {&apos;RefXYZ&apos;;&apos;Stats&apos;;&apos;TireFx&apos;;&apos;TireFy&apos;};
+    for idx=1:length(PortNames)
+        InportOption  = {&apos;built-in/Ground&apos;, [PortNames{idx}, &apos; Ground&apos;];...
+            &apos;built-in/Inport&apos;,PortNames{idx}};
+        if ~strcmp(get_param(block,ParamNames{idx}),&apos;on&apos;)
+            NewBlkHdl = autoblksreplaceblock(block, InportOption, 1);
+            set_param(NewBlkHdl, &apos;ShowName&apos;, &apos;off&apos;);
+        else
+            autoblksreplaceblock(block, InportOption, 2);
+        end
+    end
+    InportNames = {&apos;InertXYZ&apos;;&apos;InertAng&apos;;&apos;InertXdotYdotZdot&apos;;&apos;WhlAng&apos;;&apos;RefXYZ&apos;;&apos;Stats&apos;;&apos;TireFx&apos;;&apos;TireFy&apos;};
+    FoundNames = get_param(find_system(block, &apos;LookUnderMasks&apos;, &apos;all&apos;, &apos;SearchDepth&apos;, 1, &apos;FollowLinks&apos;, &apos;on&apos;, &apos;BlockType&apos;, &apos;Inport&apos;), &apos;Name&apos;);
+    [~,PortI] = intersect(InportNames, FoundNames);
+    PortI = sort(PortI);
+    for idx = 1:length(PortI)
+        set_param([block, &apos;/&apos;, InportNames{PortI(idx)}], &apos;Port&apos;, num2str(idx));
+    end
+end
+</Initialization>
+      <MaskParameter Name="extRef" Type="checkbox" Tunable="off">
+        <Prompt>Plot path reference, extRef</Prompt>
+        <Value>on</Value>
+      </MaskParameter>
+      <MaskParameter Name="extStats" Type="checkbox" Tunable="off">
+        <Prompt>Display speed, RPM and Gear</Prompt>
+        <Value>off</Value>
+      </MaskParameter>
+      <MaskParameter Name="extTireF" Type="checkbox" Tunable="off">
+        <Prompt>Display tire forces</Prompt>
+        <Value>off</Value>
+      </MaskParameter>
+      <MaskParameter Name="a" Type="promote">
+        <Prompt>Distance to front axle from CG, a [m]:</Prompt>
+        <Value>2</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/a</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="b" Type="promote">
+        <Prompt>Distance to rear axle from CG, b [m]:</Prompt>
+        <Value>2</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/b</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="w" Type="promote">
+        <Prompt>Track width, w [m]:</Prompt>
+        <Value>2</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/w</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="figBorder" Type="promote">
+        <Prompt>Distance to figure borders, figBorder [m]:</Prompt>
+        <Value>10</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/figBorder</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="bufferSize" Type="promote" Tunable="off">
+        <Prompt>Path buffer sampe size, bufferSize []: </Prompt>
+        <Value>1024</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/bufferSize</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="velNorm" Type="promote">
+        <Prompt>Velocity vector scaling, velNorm [m*s/m]:</Prompt>
+        <Value>5</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/velNorm</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="tireFNorm" Type="promote">
+        <Prompt>Tire force vector scaling, tireFNorm [m/N]:</Prompt>
+        <Value>1000</Value>
+        <TypeOptions>
+          <Option>Vehicle XY Plotter/tireFNorm</Option>
+        </TypeOptions>
+      </MaskParameter>
+      <MaskParameter Name="pltDT" Type="edit" Tunable="off">
+        <Prompt>Plot update rate, pltDT [s]:</Prompt>
+        <Value>0.2</Value>
+      </MaskParameter>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="Container3">
+        <Prompt>Plot and Display Options</Prompt>
+        <DialogControl Type="CheckBox" Name="extRef">
+          <Prompt>Plot path reference, extRef</Prompt>
+        </DialogControl>
+        <DialogControl Type="CheckBox" Name="extStats">
+          <Prompt>Display speed, RPM and Gear</Prompt>
+        </DialogControl>
+        <DialogControl Type="CheckBox" Name="extTireF">
+          <Prompt>Display tire forces</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="ParameterGroupVar">
+        <Prompt>Simulink:studio:ToolBarParametersMenu</Prompt>
+        <DialogControl Type="Edit" Name="a">
+          <Prompt>Distance to front axle from CG, a [m]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="b">
+          <Prompt>Distance to rear axle from CG, b [m]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="w">
+          <Prompt>Track width, w [m]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="figBorder">
+          <Prompt>Distance to figure borders, figBorder [m]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="bufferSize">
+          <Prompt>Path buffer sampe size, bufferSize []: </Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="velNorm">
+          <Prompt>Velocity vector scaling, velNorm [m*s/m]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="tireFNorm">
+          <Prompt>Tire force vector scaling, tireFNorm [m/N]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="pltDT">
+          <Prompt>Plot update rate, pltDT [s]:</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+      </DialogControl>
+    </Mask>
+    <System Ref="system_159"/>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">141#out:1</P>
+    <P Name="Dst">142#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">xRef</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">150#out:1</P>
+    <P Name="Points">[130, 0; 0, 15]</P>
+    <P Name="Dst">141#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">154#out:1</P>
+    <P Name="Points">[15, 0; 0, -65]</P>
+    <P Name="Dst">141#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">yRef</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">153#out:1</P>
+    <P Name="Points">[61, 0]</P>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Points">[0, 30]</P>
+      <P Name="Dst">154#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[0, -45]</P>
+      <P Name="Dst">141#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">142#out:1</P>
+    <P Name="Dst">149#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">149#out:1</P>
+    <P Name="Points">[135, 0; 0, -55]</P>
+    <P Name="Dst">159#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">140#out:1</P>
+    <P Name="Points">[9, 0]</P>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Dst">144#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Points">[0, 50]</P>
+      <Branch>
+        <P Name="ZOrder">12</P>
+        <P Name="Dst">143#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">13</P>
+        <P Name="Points">[0, 50]</P>
+        <P Name="Dst">145#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">152#out:1</P>
+    <P Name="Points">[28, 0; 0, -10]</P>
+    <P Name="Dst">156#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">143#out:1</P>
+    <P Name="Dst">148#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">148#out:1</P>
+    <P Name="Points">[108, 0; 0, 15]</P>
+    <P Name="Dst">159#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">146#out:1</P>
+    <P Name="Points">[135, 0; 0, 25]</P>
+    <P Name="Dst">159#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">147#out:1</P>
+    <P Name="Points">[80, 0; 0, 5]</P>
+    <P Name="Dst">159#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">19</P>
+    <P Name="Src">145#out:1</P>
+    <P Name="Dst">147#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">RearWheelAngles</P>
+    <P Name="ZOrder">20</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">158#out:1</P>
+    <P Name="Dst">157#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">151#out:1</P>
+    <P Name="Dst">156#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">FrontWheelAngles</P>
+    <P Name="ZOrder">22</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">156#out:1</P>
+    <P Name="Dst">157#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">144#out:1</P>
+    <P Name="Dst">146#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">155#out:1</P>
+    <P Name="Points">[11, 0]</P>
+    <Branch>
+      <P Name="ZOrder">25</P>
+      <P Name="Points">[0, 10]</P>
+      <P Name="Dst">158#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">26</P>
+      <P Name="Points">[0, -10]</P>
+      <P Name="Dst">158#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">27</P>
+    <P Name="Src">157#out:1</P>
+    <P Name="Points">[170, 0; 0, -5]</P>
+    <P Name="Dst">159#in:4</P>
+  </Line>
+</System>

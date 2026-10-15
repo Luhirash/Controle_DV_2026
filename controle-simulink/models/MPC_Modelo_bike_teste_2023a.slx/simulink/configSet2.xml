@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigSet>
+  <Object ObjectID="1" ClassName="Simulink.ConfigSet">
+    <P Name="ExtraOptions" Class="char"/>
+    <P Name="Name" Class="char">Configuration2</P>
+    <P Name="CurrentDlgPage" Class="char">Solver</P>
+    <P Name="ConfigPrmDlgPosition" Class="double">[71.0, 71.0, 902.0, 737.0]</P>
+    <P Name="Version" Class="char">26.0.0</P>
+    <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="10*1">
+      <Object ObjectID="2" ClassName="Simulink.SolverCC">
+        <P Name="StopTime" Class="char">80</P>
+        <P Name="FixedStep" Class="char">1e-3</P>
+        <P Name="SolverName" Class="char">ode8</P>
+        <P Name="SolverInfoToggleStatus" Class="char">on</P>
+        <P Name="ODENIntegrationMethod" Class="char">ode3</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="3" ClassName="Simulink.DataIOCC">
+        <P Name="ReturnWorkspaceOutputsName" Class="char">SDOSimTest_Log</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="4" ClassName="Simulink.OptimizationCC">
+        <P Name="EnhancedBackFolding" Class="char">on</P>
+        <P Name="PassReuseOutputArgsAs" Class="char">Individual arguments</P>
+        <P Name="ZeroExternalMemoryAtStartup" Class="char">off</P>
+        <P Name="ZeroInternalMemoryAtStartup" Class="char">off</P>
+        <P Name="MaxStackSize" Class="char">64</P>
+        <P Name="OptimizeBlockOrder" Class="char">speed</P>
+        <P Name="DifferentSizesBufferReuse" Class="char">on</P>
+        <P Name="OptimizationCustomize" Class="char">off</P>
+        <P Name="EfficientTunableParamExpr" Class="char">on</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="5" ClassName="Simulink.DebuggingCC">
+        <P Name="ParameterTunabilityLossMsg" Class="char">error</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="6" ClassName="Simulink.HardwareCC">
+        <P Name="ProdBitPerLong" Class="double">64.0</P>
+        <P Name="ProdHWDeviceType" Class="char">Intel-&gt;x86-64 (Linux 64)</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="7" ClassName="Simulink.ModelReferenceCC">
+        <P Name="UpdateModelReferenceTargets" Class="char">IfOutOfDateOrStructuralChange</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="8" ClassName="Simulink.SFSimCC">
+        <P Name="MATLABDynamicMemAlloc" Class="char">off</P>
+        <P Name="CustomCodeFunctionArrayLayout" Class="double">[]</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="9" ClassName="Simulink.RTWCC">
+        <P Name="SystemTargetFile" Class="char">ert.tlc</P>
+        <P Name="HardwareBoard" Class="char">None</P>
+        <P Name="ShowCustomHardwareApp" Class="char">on</P>
+        <P Name="TemplateMakefile" Class="char">ert_default_tmf</P>
+        <P Name="Toolchain" Class="char">Colcon Tools</P>
+        <P Name="BuildConfiguration" Class="char">Faster Builds</P>
+        <P Name="Description" Class="char">Embedded Coder</P>
+        <P Name="Version" Class="char">26.0.0</P>
+        <Array PropName="Components" Type="Simulink.ConfigComponent" Dimension="2*1">
+          <Object ObjectID="10" ClassName="Simulink.CodeAppCC">
+            <P Name="ForceParamTrailComments" Class="char">on</P>
+            <P Name="IgnoreCustomStorageClasses" Class="char">off</P>
+            <P Name="ShowEliminatedStatement" Class="char">on</P>
+            <P Name="OperatorAnnotations" Class="char">on</P>
+            <P Name="SimulinkDataObjDesc" Class="char">on</P>
+            <P Name="SFDataObjDesc" Class="char">on</P>
+            <P Name="InsertBlockDesc" Class="char">on</P>
+            <P Name="Version" Class="char">26.0.0</P>
+          </Object>
+          <Object ObjectID="11" ClassName="Simulink.ERTTargetCC">
+            <P Name="ExtModeMexArgs" Class="char">&apos;127.0.0.1&apos; 0 17725</P>
+            <P Name="InlinedParameterPlacement" Class="char">Hierarchical</P>
+            <P Name="RootIOFormat" Class="char">Structure reference</P>
+            <P Name="ConvertIfToSwitch" Class="char">on</P>
+            <P Name="SuppressUnreachableDefaultCases" Class="char">on</P>
+            <P Name="DynamicArrayContainerType" Class="char">coder::array</P>
+            <P Name="TargetLangStandard" Class="char">C89/C90 (ANSI)</P>
+            <P Name="MultiwordLength" Class="double">256.0</P>
+            <P Name="GenerateSampleERTMain" Class="char">off</P>
+            <P Name="ModelReferenceCompliant" Class="char">on</P>
+            <P Name="ParMdlRefBuildCompliant" Class="char">on</P>
+            <P Name="CompOptLevelCompliant" Class="char">on</P>
+            <P Name="ConcurrentExecutionCompliant" Class="char">on</P>
+            <P Name="CombineOutputUpdateFcns" Class="char">on</P>
+            <P Name="ERTCustomFileBanners" Class="char">on</P>
+            <P Name="MatFileLogging" Class="char">off</P>
+            <P Name="SupportNonFinite" Class="char">on</P>
+            <P Name="SupportContinuousTime" Class="char">on</P>
+            <P Name="SupportNonInlinedSFcns" Class="char">off</P>
+            <P Name="RemoveResetFunc" Class="char">on</P>
+            <P Name="SupportVariableSizeSignals" Class="char">on</P>
+            <P Name="MATLABClassNameForMDSCustomization" Class="char">Simulink.SoftwareTarget.ERTCustomization</P>
+            <P Name="ModelStepFunctionPrototypeControlCompliant" Class="char">on</P>
+            <P Name="CPPClassGenCompliant" Class="char">on</P>
+            <P Name="GRTInterface" Class="char">off</P>
+            <P Name="GenerateAllocFcn" Class="char">off</P>
+            <P Name="UseToolchainInfoCompliant" Class="char">on</P>
+            <P Name="Version" Class="char">26.0.0</P>
+          </Object>
+        </Array>
+      </Object>
+      <Object ObjectID="12" ClassName="SlCovCC.ConfigComp">
+        <P Name="CovEnable" Class="char">off</P>
+        <P Name="CovScope" Class="char">EntireSystem</P>
+        <P Name="CovIncludeTopModel" Class="char">on</P>
+        <P Name="CovModelRefEnable" Class="char">off</P>
+        <P Name="Description" Class="char">Simulink Coverage Configuration Component</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+      <Object ObjectID="13" ClassName="hdlcoderui.hdlcc">
+        <P Name="Description" Class="char">HDL Coder custom configuration component</P>
+        <P Name="Version" Class="char">26.0.0</P>
+      </Object>
+    </Array>
+  </Object>
+</ConfigSet>

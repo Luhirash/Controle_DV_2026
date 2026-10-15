@@ -1,0 +1,174 @@
+{
+    "GraphicalInterface":{
+        "ExternalFileReferences":[
+            {
+                "Path":"$bdroot\/2D Visualization\/Vehicle XY Plotter1\/Vehicle XY Plotter",
+                "Reference":"vehdynlibviscommon\/Vehicle XY Plotter",
+                "SID":"179",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Lane Keeping Controller",
+                "Reference":"mpcadaslib\/Lane Keeping Assist System",
+                "SID":"467",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/PID controle Longitudinal\/PID Controller",
+                "Reference":"slpidlib\/PID Controller",
+                "SID":"484",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Reference Data\/Theta\/thetaBlocks\/Difference",
+                "Reference":"simulink\/Discrete\/Difference",
+                "SID":"224",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Reference Data\/Theta\/thetaBlocks\/Difference1",
+                "Reference":"simulink\/Discrete\/Difference",
+                "SID":"225",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Reference Data\/Theta\/thetaBlocks\/Radians to Degrees",
+                "Reference":"simulink_extras\/Transformations\/Radians\nto Degrees",
+                "SID":"227",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Subsystem\/Normalization",
+                "Reference":"dspmathops\/Normalization",
+                "SID":"355",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Subsystem\/Radians to Degrees",
+                "Reference":"simulink_extras\/Transformations\/Radians\nto Degrees",
+                "SID":"283",
+                "Type":"LIBRARY_BLOCK"
+            },
+            {
+                "Path":"$bdroot\/Vehicle Body 3DOF Dual Track",
+                "Reference":"autolibshared\/Vehicle Body 3DOF Single Track",
+                "SID":"265",
+                "Type":"LIBRARY_BLOCK"
+            }
+        ],
+        "PreCompExecutionDomainType":"Unset",
+        "SimulinkSubDomainType":"Simulink",
+        "SolverName":"ode8",
+        "TestPointedSignals":[
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Estimate Lane Center",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "PortIndex":2,
+                "SignalName":"lateral_deviation"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Estimate Lane Center",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "PortIndex":3,
+                "SignalName":""
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Lane Keeping Controller",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"assisted_steer"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Vehicle Body 3DOF Dual Track",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "PortIndex":2,
+                "SignalName":""
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/2D Visualization\/From",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"xRef"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/2D Visualization\/From3",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"yRef"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/PID controle Longitudinal\/PID Controller",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":""
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/PID controle Longitudinal\/Product",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":""
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Reference Data\/MATLAB Function",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"psiref"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Reference Data\/X Ref",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"xRef"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Reference Data\/Y Ref",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"yRef"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Subsystem\/Bus Selector",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"<X>"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Subsystem\/Bus Selector",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "PortIndex":2,
+                "SignalName":"<Y>"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Subsystem\/MATLAB Function",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"psis"
+            },
+            {
+                "Decimation":2,
+                "FullBlockPath":"$bdroot\/Subsystem\/Sum3",
+                "LogSignal":true,
+                "MaxPoints":5000,
+                "SignalName":"psiserror"
+            }
+        ]
+    }
+}

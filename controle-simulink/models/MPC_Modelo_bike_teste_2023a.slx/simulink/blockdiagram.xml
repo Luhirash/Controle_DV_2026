@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInformation Version="1.0">
+  <Model>
+    <P Name="ModelUUID">1fe8aa6f-1965-4c2c-9e68-574089321a93</P>
+    <P Name="DataDictionary">modelo_bike_r23a.sldd</P>
+    <P Name="SLXCompressionType">None</P>
+    <P Name="InitFcn">load(&quot;data/refPath.mat&quot;)</P>
+    <P Name="StartFcn">load(&quot;refPath.mat&quot;)</P>
+    <P Name="LastSavedArchitecture">glnxa64</P>
+    <ConfigManagerSettings>
+      <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
+      <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.0&gt;</P>
+    </ConfigManagerSettings>
+    <SimulationSettings>
+      <P Name="SimulationMode">normal</P>
+      <P Name="EnablePacing">on</P>
+      <P Name="PacingRate">0.400000</P>
+      <Object PropName="DataLoggingOverride" ObjectID="1" ClassName="Simulink.SimulationData.ModelLoggingInfo">
+        <P Name="model_" Class="char">$bdroot</P>
+        <P Name="overrideMode_" Class="uint32">0U</P>
+      </Object>
+      <Object PropName="InstrumentedSignals" ObjectID="2" ClassName="Simulink.HMI.InstrumentedSignals">
+        <Array PropName="Persistence" Type="Struct" Dimension="15*1">
+          <MATStruct>
+            <Field Name="UUID" Class="char">90816237-f907-4015-afb2-0e17a75d33dc</Field>
+            <Field Name="BlockPath_" Class="char">PID controle Longitudinal/Product</Field>
+            <Field Name="SID_" Class="char">62</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">0b4944c6-afb6-4010-9f32-85f7b8ba7a09</Field>
+            <Field Name="BlockPath_" Class="char">Vehicle Body 3DOF Dual Track</Field>
+            <Field Name="SID_" Class="char">69</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">2.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">028921b3-0d03-41ec-ae75-a03d6346c3bc</Field>
+            <Field Name="BlockPath_" Class="char">Subsystem/Bus Selector</Field>
+            <Field Name="SID_" Class="char">91</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">6a3d2602-b07f-4414-b792-e57b67e1d197</Field>
+            <Field Name="BlockPath_" Class="char">Subsystem/Bus Selector</Field>
+            <Field Name="SID_" Class="char">91</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">2.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">a9e845d5-7c62-444c-b81d-ec2814601f67</Field>
+            <Field Name="BlockPath_" Class="char">2D Visualization/From3</Field>
+            <Field Name="SID_" Class="char">110</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">b18f6d21-a214-4c35-b146-f90cf6e5f065</Field>
+            <Field Name="BlockPath_" Class="char">2D Visualization/From</Field>
+            <Field Name="SID_" Class="char">107</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">eb378a56-0b8a-497e-a457-0ae2c398d514</Field>
+            <Field Name="BlockPath_" Class="char">PID controle Longitudinal/PID Controller</Field>
+            <Field Name="SID_" Class="char">200</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">6bd9e827-cf18-46d7-b332-0bab6e9e99f8</Field>
+            <Field Name="BlockPath_" Class="char">Reference Data/Y Ref</Field>
+            <Field Name="SID_" Class="char">244</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">576b8734-287a-457a-8fc8-7e8931625019</Field>
+            <Field Name="BlockPath_" Class="char">Reference Data/X Ref</Field>
+            <Field Name="SID_" Class="char">243</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">5830b165-a370-46b7-b8c4-47c2509f3040</Field>
+            <Field Name="BlockPath_" Class="char">Subsystem/MATLAB Function</Field>
+            <Field Name="SID_" Class="char">317</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char">psis</Field>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">06c553dc-0b7f-4452-94de-eeb28d493403</Field>
+            <Field Name="BlockPath_" Class="char">Reference Data/MATLAB Function</Field>
+            <Field Name="SID_" Class="char">316</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">db37963d-f321-4a58-912a-ba26cec8fa5d</Field>
+            <Field Name="BlockPath_" Class="char">Subsystem/Sum3</Field>
+            <Field Name="SID_" Class="char">327</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">1024.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">7fe05b11-739b-4590-80d8-3adcd2119446</Field>
+            <Field Name="BlockPath_" Class="char">Estimate Lane Center</Field>
+            <Field Name="SID_" Class="char">375</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">2.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">8de2f7e4-d7cb-41ea-8298-e22b5beadef9</Field>
+            <Field Name="BlockPath_" Class="char">Estimate Lane Center</Field>
+            <Field Name="SID_" Class="char">375</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">3.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">d5cbc69d-fa24-4dca-8eae-f382db6cf878</Field>
+            <Field Name="BlockPath_" Class="char">Lane Keeping Controller</Field>
+            <Field Name="SID_" Class="char">467</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+        </Array>
+      </Object>
+    </SimulationSettings>
+    <EngineSettings>
+      <P Name="ConfigurableSubsystemUsage">warning</P>
+    </EngineSettings>
+    <ConcurrentExecutionSettings>
+      <Object PropName="DataTransfer" ObjectID="3" ClassName="Simulink.GlobalDataTransfer">
+        <P Name="DefaultTransitionBetweenSyncTasks" Class="char">Ensure deterministic transfer (maximum delay)</P>
+        <P Name="DefaultTransitionBetweenAsyncTasks" Class="char">Ensure data integrity only</P>
+        <P Name="DefaultTransitionBetweenContTasks" Class="char">Ensure deterministic transfer (minimum delay)</P>
+        <P Name="DefaultExtrapolationMethodBetweenContTasks" Class="char">None</P>
+      </Object>
+    </ConcurrentExecutionSettings>
+    <System Ref="system_root"/>
+  </Model>
+</ModelInformation>

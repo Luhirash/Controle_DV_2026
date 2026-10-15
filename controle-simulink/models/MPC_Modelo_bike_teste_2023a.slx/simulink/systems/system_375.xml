@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[8, 8, 1930, 1049]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">155</P>
+  <Block BlockType="Inport" Name="Longitudinal Velocity" SID="376">
+    <P Name="Position">[1160, 318, 1190, 332]</P>
+    <P Name="ZOrder">53468</P>
+  </Block>
+  <Block BlockType="Inport" Name="curvature0" SID="377">
+    <P Name="Position">[740, 208, 770, 222]</P>
+    <P Name="ZOrder">53473</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="dCurvature" SID="378">
+    <P Name="Position">[740, 263, 770, 277]</P>
+    <P Name="ZOrder">53474</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="angle" SID="379">
+    <P Name="Position">[1215, 428, 1245, 442]</P>
+    <P Name="ZOrder">53475</P>
+    <P Name="Port">4</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">psiserror</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="lateral" SID="380">
+    <P Name="Position">[1215, 483, 1245, 497]</P>
+    <P Name="ZOrder">53476</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Preview Curvature" SID="449">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[1330, 187, 1540, 353]</P>
+    <P Name="ZOrder">53392</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="SystemSampleTime">Ts</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">rho</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_449"/>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation2" SID="452">
+    <P Name="Position">[1095, 200, 1125, 230]</P>
+    <P Name="ZOrder">53421</P>
+    <P Name="UpperLimit">0.15</P>
+    <P Name="LowerLimit">-0.15</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation3" SID="453">
+    <P Name="Position">[1095, 255, 1125, 285]</P>
+    <P Name="ZOrder">53423</P>
+    <P Name="UpperLimit">0.06</P>
+    <P Name="LowerLimit">-0.06</P>
+  </Block>
+  <Block BlockType="UnaryMinus" Name="Unary Minus" SID="454">
+    <P Name="Position">[1420, 420, 1450, 450]</P>
+    <P Name="ZOrder">53471</P>
+  </Block>
+  <Block BlockType="UnaryMinus" Name="Unary Minus1" SID="455">
+    <P Name="Position">[1420, 475, 1450, 505]</P>
+    <P Name="ZOrder">53472</P>
+  </Block>
+  <Block BlockType="Outport" Name="Previewed Curvature" SID="456">
+    <P Name="Position">[1610, 263, 1640, 277]</P>
+    <P Name="ZOrder">53381</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="Lateral Offset" SID="457">
+    <P Name="Position">[1605, 483, 1635, 497]</P>
+    <P Name="ZOrder">53382</P>
+    <P Name="Port">2</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="Heading Angle" SID="458">
+    <P Name="Position">[1600, 428, 1630, 442]</P>
+    <P Name="ZOrder">53383</P>
+    <P Name="Port">3</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">379#out:1</P>
+    <P Name="Dst">454#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">380#out:1</P>
+    <P Name="Dst">455#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">377#out:1</P>
+    <P Name="Dst">452#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">378#out:1</P>
+    <P Name="Dst">453#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">376#out:1</P>
+    <P Name="Dst">449#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">449#out:1</P>
+    <P Name="Dst">456#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">26</P>
+    <P Name="Src">455#out:1</P>
+    <P Name="Dst">457#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">454#out:1</P>
+    <P Name="Dst">458#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">452#out:1</P>
+    <P Name="Dst">449#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">453#out:1</P>
+    <P Name="Dst">449#in:2</P>
+  </Line>
+  <Annotation SID="459">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:16px; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:100%;&quot;&gt;&lt;span style=&quot; font-size:16px; color:#000000;&quot;&gt;Estimate Lane Center&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[596, 101, 761, 121]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">center</P>
+    <P Name="VerticalAlignment">middle</P>
+    <P Name="DropShadow">on</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="FontName">Arial</P>
+    <P Name="FontSize">16</P>
+    <P Name="FontWeight">bold</P>
+  </Annotation>
+</System>

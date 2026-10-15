@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[0, 0, 1116, 571]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">528</P>
+  <Block BlockType="SubSystem" Name="2D Visualization" SID="139">
+    <PortCounts in="1"/>
+    <P Name="Position">[1280, -20, 1430, 120]</P>
+    <P Name="ZOrder">100000</P>
+    <Mask>
+      <Display RunInitForIconRedraw="off">image(&quot;visualization.JPG&quot;);</Display>
+    </Mask>
+    <System Ref="system_139"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Concatenate" SID="180">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[855, 64, 910, 106]</P>
+    <P Name="ZOrder">100000</P>
+    <System Ref="system_180"/>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="373">
+    <P Name="Position">[935, 265, 965, 295]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">-1.571</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="186">
+    <P Name="Position">[935, 155, 965, 185]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">X_o</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="187">
+    <P Name="Position">[935, 210, 965, 240]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">Y_o</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant4" SID="466">
+    <P Name="Position">[130, 185, 160, 215]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">5</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Estimate Lane Center" SID="375">
+    <PortCounts in="5" out="3"/>
+    <P Name="Position">[205, 40, 375, 220]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="VariantControl">v2</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">rho</P>
+      </Port>
+      <Port Type="out" Index="2">
+        <P Name="Name">lateral_deviation</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_375"/>
+  </Block>
+  <Block BlockType="Reference" Name="Lane Keeping Controller" SID="467">
+    <PortCounts in="4" out="1"/>
+    <P Name="Position">[520, 49, 705, 226]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="LibraryVersion">14.1</P>
+    <P Name="SourceBlock">mpcadaslib/Lane Keeping Assist System</P>
+    <P Name="SourceType">Lane Keeping Assist (LKA) System</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="ModelType">Use vehicle parameters</P>
+      <P Name="VehicleMass">massa</P>
+      <P Name="VehicleYawInertia">inercial_polar_yaw</P>
+      <P Name="LengthToFront">distancia_eixo_frontal_centro_massa</P>
+      <P Name="LengthToRear">distancia_eixo_ftraseiro_centro_massa</P>
+      <P Name="FrontTireStiffness">rigidez_lateral_pneu_frontal</P>
+      <P Name="RearTireStiffness">rigidez_lateral_pneu_traseira</P>
+      <P Name="EgoModelMatrixA">[-4.4021 ,-12.4603;1.3913,-5.1868] </P>
+      <P Name="EgoModelMatrixB">[24.1270;15.8609]</P>
+      <P Name="EgoModelMatrixC">[1,0;0,1]</P>
+      <P Name="InitialLongVel">1</P>
+      <P Name="TransportLag">0</P>
+      <P Name="MinSteering">-0.5</P>
+      <P Name="umin_ext">off</P>
+      <P Name="MaxSteering">0.5</P>
+      <P Name="umax_ext">off</P>
+      <P Name="Ts">0.001</P>
+      <P Name="PredictionHorizon">PredictionHorizon</P>
+      <P Name="ControllerBehavior">0.0</P>
+      <P Name="suboptimal">off</P>
+      <P Name="maxiter">10</P>
+      <P Name="datatypeopt">single</P>
+      <P Name="optmode">off</P>
+      <P Name="trackmode">off</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">assisted_steer</P>
+        <P Name="DataLogging">on</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="SubSystem" Name="PID controle Longitudinal" SID="478">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[135, 249, 220, 351]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_478"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Reference Data" SID="207">
+    <PortCounts in="1" out="3"/>
+    <P Name="Position">[-260, 76, -155, 254]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="VariantControl">Stanley</P>
+    <System Ref="system_207"/>
+  </Block>
+  <Block BlockType="Scope" Name="Scope" SID="526">
+    <PortCounts in="1"/>
+    <P Name="Position">[835, 14, 865, 46]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GraphicalSettings">{&quot;Style&quot;:{&quot;BackgroundColor&quot;:[0.12941176470588237,0.12941176470588237,0.12941176470588237],&quot;AxesColor&quot;:[0.07058823529411765,0.07058823529411765,0.07058823529411765],&quot;LabelsColor&quot;:[0.8509803921568627,0.8509803921568627,0.8509803921568627],&quot;PreserveColors&quot;:false,&quot;Visible&quot;:[true],&quot;LineStyle&quot;:[&quot;-&quot;],&quot;LineWidth&quot;:[1.5],&quot;BarWidth&quot;:[0.9],&quot;LineColor&quot;:[&quot;auto&quot;],&quot;LineFaceAlpha&quot;:[1],&quot;LineEdgeAlpha&quot;:[1],&quot;Marker&quot;:[&quot;none&quot;],&quot;FontSize&quot;:8.5,&quot;LineTrueColor&quot;:[[1,0.9098039215686274,0.39215686274509803]],&quot;ChannelNames&quot;:&quot;&quot;,&quot;DefaultLegendLabel&quot;:[&quot;assisted_steer&quot;],&quot;PlotType&quot;:&quot;Auto&quot;,&quot;NumLinesForDisplays&quot;:[1],&quot;OffsetView&quot;:true,&quot;LineLabels&quot;:[&quot;assisted_steer&quot;],&quot;MinimizeControls&quot;:false,&quot;LineCache&quot;:null},&quot;MeasurementChannel&quot;:0,&quot;AxesScalingProperties&quot;:{&quot;AxesScaling&quot;:&quot;Manual&quot;,&quot;ExpandOnly&quot;:true,&quot;AxesScalingNumUpdates&quot;:10,&quot;ScaleAxesLimitsAtStop&quot;:false,&quot;YAxisDataRange&quot;:80,&quot;AlignYAxis&quot;:&quot;Center&quot;,&quot;AutoScaleXAxisLimits&quot;:false,&quot;XAxisDataRange&quot;:100,&quot;AlignXAxis&quot;:&quot;Center&quot;},&quot;DisplayProperties&quot;:{&quot;DisplayLayoutDimensions&quot;:[1,1],&quot;DisplayPropertyDefaults&quot;:{&quot;MaxYLimMag&quot;:0.625,&quot;MaxYLimReal&quot;:0.625,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-0.625,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;},&quot;DisplayContentCache&quot;:{&quot;Title&quot;:&quot;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0},&quot;SerializedDisplays&quot;:[{&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;LinePropertiesCache&quot;:{},&quot;UserDefinedChannelNames&quot;:{},&quot;PlotMagPhase&quot;:0,&quot;MaxYLimMag&quot;:0.625,&quot;MaxYLimReal&quot;:0.625,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-0.625,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;YLabel&quot;:&quot;&quot;,&quot;NumLines&quot;:1,&quot;ShowContent&quot;:1,&quot;Placement&quot;:0}],&quot;ColorOrder&quot;:[&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;,&quot;auto&quot;]}}</P>
+    <P Name="WindowPosition">[357.000000,354.000000,1250.000000,768.000000,]</P>
+    <P Name="Visible">on</P>
+    <P Name="WasSavedAsWebScope">on</P>
+    <P Name="ContainerLayout">{&quot;WindowBounds&quot;:[-9820,1276.6,1248,764],&quot;ToolstripCollapsed&quot;:true}</P>
+    <P Name="Floating">off</P>
+    <P Name="MultipleDisplayCache">[{&quot;MaxYLimMag&quot;:1,&quot;MaxYLimReal&quot;:1,&quot;MinYLimMag&quot;:0,&quot;MinYLimReal&quot;:-1,&quot;PlotAsMagnitudePhase&quot;:false,&quot;ShowGrid&quot;:true,&quot;ShowLegend&quot;:false,&quot;Title&quot;:&quot;%&lt;SignalLabel&gt;&quot;,&quot;YLabel&quot;:&quot;&quot;}]</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="ActiveDisplayYMinimum">-1</P>
+    <P Name="ActiveDisplayYMaximum">1</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Stop Logic1" SID="249">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[1315, 135, 1400, 205]</P>
+    <P Name="ZOrder">100000</P>
+    <System Ref="system_249"/>
+  </Block>
+  <Block BlockType="Stop" Name="Stop Simulation" SID="524">
+    <P Name="Position">[1445, 152, 1480, 188]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Subsystem" SID="257">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[20, -24, 80, 34]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;b99b5404-081b-413b-8715-691cf6906cbd&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;44ae264f-bc35-4d6a-b735-b6c150e7b378&quot;},{&quot;content&quot;:{&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;02beee6b-e892-461e-bd21-f2bfa96f1776&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;e0ea02da-d749-438f-a103-031e8afedff8&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">psiserror</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_257"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Subsystem2" SID="461">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[10, 109, 110, 151]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_461"/>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="517">
+    <P Name="Position">[-145, 95, -125, 115]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="518">
+    <P Name="Position">[-145, 155, -125, 175]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator2" SID="519">
+    <P Name="Position">[1205, 120, 1225, 140]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator3" SID="520">
+    <P Name="Position">[1205, 160, 1225, 180]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator4" SID="521">
+    <P Name="Position">[1205, 200, 1225, 220]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator5" SID="522">
+    <P Name="Position">[1205, 240, 1225, 260]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator6" SID="523">
+    <P Name="Position">[1205, 280, 1225, 300]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Reference" Name="Vehicle Body 3DOF Dual Track" SID="265">
+    <PortCounts in="5" out="7"/>
+    <P Name="Position">[1040, 34, 1190, 306]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="LibrarySourceBlock">vehdynlibeom/Vehicle Body 3DOF Single Track</P>
+    <P Name="LibraryVersion">12.32</P>
+    <P Name="SourceBlock">autolibshared/Vehicle Body 3DOF Single Track</P>
+    <P Name="SourceType">Vehicle Body 3DOF Lateral</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="trackMode">Dual</P>
+      <P Name="inputMode">External longitudinal velocity</P>
+      <P Name="frontSteerMode">on</P>
+      <P Name="rearSteerMode">off</P>
+      <P Name="extFMode">off</P>
+      <P Name="htchFMode">off</P>
+      <P Name="extMMode">off</P>
+      <P Name="htchMMode">off</P>
+      <P Name="windMode">off</P>
+      <P Name="extTamb">off</P>
+      <P Name="muMode">off</P>
+      <P Name="extGndPlnElev">off</P>
+      <P Name="extGndPlnRoll">off</P>
+      <P Name="extGndPlnPitch">off</P>
+      <P Name="extGndPlnDCM">off</P>
+      <P Name="extXo">on</P>
+      <P Name="extxdoto">off</P>
+      <P Name="extYo">on</P>
+      <P Name="extydoto">off</P>
+      <P Name="extpsio">on</P>
+      <P Name="extro">off</P>
+      <P Name="aMode">2</P>
+      <P Name="NF">numero_de_eixos_frente</P>
+      <P Name="NR">numero_de_eixos_traseira</P>
+      <P Name="m">massa</P>
+      <P Name="a">distancia_eixo_frontal_centro_massa</P>
+      <P Name="b">distancia_eixo_ftraseiro_centro_massa</P>
+      <P Name="h">distancia_chao_plano_centro_massa</P>
+      <P Name="dh">1</P>
+      <P Name="hh">0.2</P>
+      <P Name="X_o">0</P>
+      <P Name="xdot_o">vel_o</P>
+      <P Name="d">distancia_lateral_linha_gemetrica_centro_massa</P>
+      <P Name="hl">0</P>
+      <P Name="w">bitola</P>
+      <P Name="CalphaMode">Constant</P>
+      <P Name="sigmaMode">on</P>
+      <P Name="sigma_f">comprimento_relaxacao_frontal</P>
+      <P Name="sigma_r">comprimento_relaxacao_traseira</P>
+      <P Name="Cy_f">rigidez_lateral_pneu_frontal</P>
+      <P Name="Cy_r">rigidez_lateral_pneu_traseira</P>
+      <P Name="Cy_f_data">[-9e3 9e3]</P>
+      <P Name="alpha_f_brk">[-.1 .1]</P>
+      <P Name="Fz_f_brk">[500	1.555555555555556e+03	2.611111111111111e+03	3.666666666666667e+03	4.722222222222223e+03	5.777777777777777e+03	6.833333333333333e+03	7.888888888888889e+03	8.944444444444445e+03	10000]</P>
+      <P Name="Cy_r_data">[-9e3 9e3]</P>
+      <P Name="alpha_r_brk">[-.1 .1]</P>
+      <P Name="Fz_r_brk">[500	1.555555555555556e+03	2.611111111111111e+03	3.666666666666667e+03	4.722222222222223e+03	5.777777777777777e+03	6.833333333333333e+03	7.888888888888889e+03	8.944444444444445e+03	10000]</P>
+      <P Name="Fznom">5000</P>
+      <P Name="Y_o">0</P>
+      <P Name="ydot_o">0</P>
+      <P Name="Izz">inercial_polar_yaw</P>
+      <P Name="psi_o">0</P>
+      <P Name="r_o">giro_yaw_inicial</P>
+      <P Name="Af">area_arrasto_longitudinal</P>
+      <P Name="Cd">coeficiente_longitudinal_arrasto</P>
+      <P Name="Cl">coefficient_longitudinal_sustentacao</P>
+      <P Name="Cpm">arrasto_longitudinal_pitch</P>
+      <P Name="beta_w">[0:0.01:0.3]</P>
+      <P Name="Cs">[0:0.03:0.9]</P>
+      <P Name="Cym">[0:0.01:0.3]</P>
+      <P Name="Pabs">101325</P>
+      <P Name="Tair">273</P>
+      <P Name="g">9.81</P>
+      <P Name="mu">1</P>
+      <P Name="GndPlnRoll">0</P>
+      <P Name="GndPlnPitch">0</P>
+      <P Name="GndPlnElev">0</P>
+      <P Name="xdot_tol">.01</P>
+      <P Name="Fxtire_sat">7e4</P>
+      <P Name="Fytire_sat">7e4</P>
+      <P Name="longOff">0</P>
+      <P Name="latOff">0</P>
+      <P Name="vertOff">0</P>
+      <P Name="wrapAng">off</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="DataLogging">on</P>
+      </Port>
+      <Port Type="out" Index="4">
+        <P Name="PropagatedSignals">psi</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Line>
+    <P Name="ZOrder">77</P>
+    <P Name="Src">186#out:1</P>
+    <P Name="Dst">265#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">83</P>
+    <P Name="Src">265#out:1</P>
+    <P Name="Points">[30, 0]</P>
+    <Branch>
+      <P Name="ZOrder">704</P>
+      <P Name="Points">[0, -45]</P>
+      <P Name="Dst">257#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">700</P>
+      <P Name="Dst">139#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">86</P>
+    <P Name="Src">207#out:3</P>
+    <P Name="Points">[0, 0]</P>
+    <Branch>
+      <P Name="ZOrder">739</P>
+      <P Name="Points">[25, 0; 0, 50]</P>
+      <P Name="Dst">478#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">655</P>
+      <P Name="Points">[-15, 0; 0, -95]</P>
+      <Branch>
+        <P Name="ZOrder">706</P>
+        <P Name="Points">[0, -35]</P>
+        <P Name="Dst">375#in:2</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">550</P>
+        <P Name="Dst">461#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">87</P>
+    <P Name="Src">187#out:1</P>
+    <P Name="Dst">265#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">676</P>
+    <P Name="Src">373#out:1</P>
+    <P Name="Dst">265#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">551</P>
+    <P Name="Src">461#out:1</P>
+    <P Name="Dst">375#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">552</P>
+    <P Name="Src">466#out:1</P>
+    <P Name="Dst">375#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">558</P>
+    <P Name="Src">375#out:1</P>
+    <P Name="Dst">467#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">lateral_deviation</P>
+    <P Name="FontName">Helvetica</P>
+    <P Name="FontSize">9</P>
+    <P Name="FontWeight">normal</P>
+    <P Name="FontAngle">normal</P>
+    <P Name="ZOrder">559</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">375#out:2</P>
+    <P Name="Points">[63, 0; 0, 30]</P>
+    <P Name="Dst">467#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">567</P>
+    <P Name="Src">478#out:1</P>
+    <P Name="Points">[270, 0; 0, -54]</P>
+    <Branch>
+      <P Name="ZOrder">569</P>
+      <P Name="Points">[420, 0; 0, -131]</P>
+      <P Name="Dst">265#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">568</P>
+      <P Name="Points">[0, -131]</P>
+      <P Name="Dst">467#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">assisted_steer</P>
+    <P Name="ZOrder">654</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">467#out:1</P>
+    <P Name="Points">[111, 0; 0, -55]</P>
+    <Branch>
+      <P Name="ZOrder">741</P>
+      <P Name="Points">[0, -55]</P>
+      <P Name="Dst">526#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">740</P>
+      <P Name="Dst">180#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">687</P>
+    <P Name="Src">265#out:2</P>
+    <P Name="Points">[39, 0; 0, 80]</P>
+    <Branch>
+      <P Name="ZOrder">692</P>
+      <P Name="Dst">249#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">691</P>
+      <P Name="Points">[0, 214; -1167, 0; 0, -39]</P>
+      <Branch>
+        <P Name="ZOrder">690</P>
+        <P Name="Points">[-133, 0]</P>
+        <Branch>
+          <P Name="ZOrder">683</P>
+          <P Name="Points">[0, -285]</P>
+          <P Name="Dst">375#in:1</P>
+        </Branch>
+        <Branch>
+          <P Name="ZOrder">682</P>
+          <P Name="Points">[-218, 0; 0, -180]</P>
+          <P Name="Dst">207#in:1</P>
+        </Branch>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">665</P>
+        <P Name="Points">[0, -20]</P>
+        <P Name="Dst">478#in:2</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">631</P>
+    <P Name="Src">375#out:3</P>
+    <P Name="Points">[31, 0; 0, 15]</P>
+    <P Name="Dst">467#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">674</P>
+    <P Name="Src">180#out:1</P>
+    <P Name="Points">[60, 0; 0, -25]</P>
+    <P Name="Dst">265#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">685</P>
+    <P Name="Src">257#out:1</P>
+    <P Name="Points">[-29, 0; 0, 160]</P>
+    <P Name="Dst">375#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">672</P>
+    <P Name="Src">207#out:1</P>
+    <P Name="Dst">517#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">673</P>
+    <P Name="Src">207#out:2</P>
+    <P Name="Dst">518#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">693</P>
+    <P Name="Src">265#out:4</P>
+    <P Name="Dst">520#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">694</P>
+    <P Name="Src">265#out:3</P>
+    <P Name="Dst">519#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">695</P>
+    <P Name="Src">265#out:5</P>
+    <P Name="Dst">521#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">696</P>
+    <P Name="Src">265#out:6</P>
+    <P Name="Dst">522#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">697</P>
+    <P Name="Src">265#out:7</P>
+    <P Name="Dst">523#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">702</P>
+    <P Name="Src">249#out:1</P>
+    <P Name="Dst">524#in:1</P>
+  </Line>
+</System>

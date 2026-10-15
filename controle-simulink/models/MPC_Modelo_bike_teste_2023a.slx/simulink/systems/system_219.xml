@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-2, 47, 999, 664]</P>
+  <Block BlockType="Inport" Name="y" SID="220">
+    <P Name="Position">[50, 52, 80, 68]</P>
+    <P Name="ZOrder">1</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">yRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="x" SID="221">
+    <P Name="Position">[50, 102, 80, 118]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">2</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">xRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="dis" SID="222">
+    <P Name="Position">[50, 152, 80, 168]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Trigonometry" Name="Atan2" SID="223">
+    <PortCounts in="2" out="1"/>
+    <P Name="Position">[275, 92, 305, 123]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Operator">atan2</P>
+    <P Name="ApproximationMethod">CORDIC</P>
+  </Block>
+  <Block BlockType="Reference" Name="Difference" SID="224">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[175, 82, 235, 118]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="LibraryVersion">9.1</P>
+    <P Name="SourceBlock">simulink/Discrete/Difference</P>
+    <P Name="SourceType">Difference</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="ICPrevInput">0.0</P>
+      <P Name="InputProcessing">Elements as channels (sample based)</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="OutputDataTypeScalingMode">Inherit via internal rule</P>
+      <P Name="OutDataType">fixdt(1, 16)</P>
+      <P Name="OutScaling">2^-10</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="DoSatur">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Difference1" SID="225">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[175, 122, 235, 158]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="LibraryVersion">9.1</P>
+    <P Name="SourceBlock">simulink/Discrete/Difference</P>
+    <P Name="SourceType">Difference</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="ICPrevInput">0.0</P>
+      <P Name="InputProcessing">Elements as channels (sample based)</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="OutputDataTypeScalingMode">Inherit via internal rule</P>
+      <P Name="OutDataType">fixdt(1, 16)</P>
+      <P Name="OutScaling">2^-10</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="DoSatur">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="InitialCondition" Name="IC" SID="226">
+    <P Name="Position">[420, 88, 460, 132]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">psi_o</P>
+  </Block>
+  <Block BlockType="Reference" Name="Radians&#xA;to Degrees" SID="227">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[565, 95, 595, 125]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="LibraryVersion">17.0</P>
+    <P Name="SourceBlock">simulink_extras/Transformations/Radians
+to Degrees</P>
+    <P Name="SourceType">RadiansToDegrees</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="228">
+    <P Name="Position">[120, 150, 140, 170]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Outport" Name="theta" SID="229">
+    <P Name="Position">[645, 102, 675, 118]</P>
+    <P Name="ZOrder">4</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">226#out:1</P>
+    <P Name="Dst">227#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">223#out:1</P>
+    <P Name="Dst">226#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">222#out:1</P>
+    <P Name="Dst">228#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">221#out:1</P>
+    <P Name="Points">[43, 0; 0, 30]</P>
+    <P Name="Dst">225#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">220#out:1</P>
+    <P Name="Points">[43, 0; 0, 40]</P>
+    <P Name="Dst">224#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">227#out:1</P>
+    <P Name="Dst">229#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">224#out:1</P>
+    <P Name="Dst">223#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">225#out:1</P>
+    <P Name="Points">[13, 0; 0, -25]</P>
+    <P Name="Dst">223#in:2</P>
+  </Line>
+  <Annotation SID="230">
+    <P Name="Name">theta calculated from Simulink blocks</P>
+    <P Name="Position">[175, 191, 341, 205]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

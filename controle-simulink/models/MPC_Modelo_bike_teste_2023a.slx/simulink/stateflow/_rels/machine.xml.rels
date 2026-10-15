@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="chart_13" Target="chart_13.xml" Type="http://schemas.mathworks.com/simulinkModel/2018/relationships/stateflowMachine"/>
+  <Relationship Id="chart_20" Target="chart_20.xml" Type="http://schemas.mathworks.com/simulinkModel/2018/relationships/stateflowMachine"/>
+  <Relationship Id="chart_27" Target="chart_27.xml" Type="http://schemas.mathworks.com/simulinkModel/2018/relationships/stateflowMachine"/>
+</Relationships>

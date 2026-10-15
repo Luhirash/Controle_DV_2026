@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[8, 8, 1930, 1049]</P>
+  <P Name="Open">on</P>
+  <P Name="ZoomFactor">207</P>
+  <Block BlockType="Inport" Name="VelFdbk" SID="208">
+    <P Name="Position">[-805, -137, -775, -123]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="371">
+    <P Name="Position">[-550, 300, -520, 330]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutDataTypeStr">single</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="Curvature" SID="209">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-570, 188, -505, 252]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">gradbp</P>
+    <P Name="Table">curvature</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="211">
+    <P Name="Position">[-460, -145, -420, -115]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">xRef</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="212">
+    <P Name="Position">[-425, -30, -385, 0]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">yRef</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="324">
+    <P Name="Position">[-150, 95, -110, 125]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">thetaRef</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="213">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-730, -145, -700, -115]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="MATLAB Function" SID="316">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-295, 67, -225, 113]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">psiref</P>
+        <P Name="PropagatedSignals">out</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_316"/>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="214">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[-105, -88, -100, 18]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Theta" SID="215">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[-425, 69, -325, 111]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Variant">on</P>
+    <P Name="VariantControlMode">label</P>
+    <P Name="LabelModeActiveChoice">thetaSimulinkBlock</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_215"/>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="X Ref" SID="243">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-575, -162, -510, -98]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">gradbp</P>
+    <P Name="Table">xRef2s</P>
+    <P Name="ExtrapMethod">Clip</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">xRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="Y Ref" SID="244">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[-575, -67, -510, -3]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">gradbp</P>
+    <P Name="Table">yRef2s</P>
+    <P Name="ExtrapMethod">Clip</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">yRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Outport" Name="RefPose" SID="245">
+    <P Name="Position">[-20, -42, 10, -28]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="OutDataTypeStr">double</P>
+  </Block>
+  <Block BlockType="Outport" Name="DirectionO" SID="246">
+    <P Name="Position">[-455, 308, -425, 322]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">2</P>
+    <P Name="OutDataTypeStr">single</P>
+  </Block>
+  <Block BlockType="Outport" Name="CurvatureO" SID="247">
+    <P Name="Position">[-455, 213, -425, 227]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">32</P>
+    <P Name="Src">371#out:1</P>
+    <P Name="Dst">246#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">209#out:1</P>
+    <P Name="Dst">247#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">yRef</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">244#out:1</P>
+    <P Name="Points">[55, 0]</P>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, 110]</P>
+      <P Name="Dst">215#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Points">[10, 0]</P>
+      <Branch>
+        <P Name="ZOrder">6</P>
+        <P Name="Labels">[1, 1]</P>
+        <P Name="Points">[335, 0]</P>
+        <P Name="Dst">214#in:2</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">7</P>
+        <P Name="Dst">212#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">214#out:1</P>
+    <P Name="Dst">245#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">xRef</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">243#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Points">[0, 60]</P>
+      <Branch>
+        <P Name="ZOrder">11</P>
+        <P Name="Points">[0, 160]</P>
+        <P Name="Dst">215#in:2</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">12</P>
+        <P Name="Labels">[1, 1]</P>
+        <P Name="Points">[380, 0]</P>
+        <P Name="Dst">214#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">13</P>
+      <P Name="Dst">211#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">213#out:1</P>
+    <P Name="Points">[21, 0]</P>
+    <Branch>
+      <P Name="ZOrder">15</P>
+      <P Name="Points">[0, 350]</P>
+      <P Name="Dst">209#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">18</P>
+      <P Name="Points">[79, 0]</P>
+      <Branch>
+        <P Name="ZOrder">19</P>
+        <P Name="Points">[0, 95]</P>
+        <Branch>
+          <P Name="ZOrder">20</P>
+          <P Name="Points">[0, 140]</P>
+          <P Name="Dst">215#in:3</P>
+        </Branch>
+        <Branch>
+          <P Name="ZOrder">21</P>
+          <P Name="Dst">244#in:1</P>
+        </Branch>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">22</P>
+        <P Name="Dst">243#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">208#out:1</P>
+    <P Name="Dst">213#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">215#out:1</P>
+    <P Name="Dst">316#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">psiref</P>
+    <P Name="ZOrder">26</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">316#out:1</P>
+    <P Name="Points">[52, 0]</P>
+    <Branch>
+      <P Name="ZOrder">29</P>
+      <P Name="Labels">[0, 1]</P>
+      <P Name="Points">[0, 20]</P>
+      <P Name="Dst">324#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">28</P>
+      <P Name="Points">[3, 0; 0, -90]</P>
+      <P Name="Dst">214#in:3</P>
+    </Branch>
+  </Line>
+  <Annotation SID="248">
+    <P Name="Name">Select method to calculate theta</P>
+    <P Name="Position">[-447, 133, -304, 147]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

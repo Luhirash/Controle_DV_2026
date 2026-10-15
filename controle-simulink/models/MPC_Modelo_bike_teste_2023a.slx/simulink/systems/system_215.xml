@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[70, 27, 1920, 1080]</P>
+  <P Name="ZoomFactor">175</P>
+  <Block BlockType="Inport" Name="y" SID="216">
+    <P Name="Position">[55, 113, 85, 127]</P>
+    <P Name="ZOrder">-1</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">yRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="x" SID="217">
+    <P Name="Position">[55, 193, 85, 207]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Port">2</P>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="PropagatedSignals">xRef</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Inport" Name="dis" SID="218">
+    <P Name="Position">[55, 248, 85, 262]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="thetaBlocks" SID="219">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[195, 214, 245, 266]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="VariantControl">thetaSimulinkBlock</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_219"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="thetaLt" SID="231">
+    <PortCounts in="3" out="1"/>
+    <P Name="Position">[195, 99, 245, 151]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="VariantControl">thetaLookUpTable</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_231"/>
+  </Block>
+  <Block BlockType="Outport" Name="theta" SID="241">
+    <P Name="Position">[415, 193, 445, 207]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Annotation SID="242">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px;&quot;&gt;1) Add &lt;/span&gt;&lt;a href=&quot;matlab://addvsschoiceddg_cb(gcs,&apos;SubSystem&apos;);&quot;&gt;&lt;span style=&quot; font-size:10px; text-decoration: underline; color:#0000ff;&quot;&gt;Subsystem&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; or &lt;/span&gt;&lt;a href=&quot;matlab://addvsschoiceddg_cb(gcs,&apos;ModelReference&apos;);&quot;&gt;&lt;span style=&quot; font-size:10px; text-decoration: underline; color:#0000ff;&quot;&gt;Model&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; blocks as valid variant choices.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px;&quot;&gt;2) You cannot connect blocks at this level. At simulation, connectivity is automatically &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px;&quot;&gt;determined, based on the active variant and port name matching.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Tag">VSSAddChoiceText</P>
+    <P Name="Position">[71, 8, 449, 49]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="VerticalAlignment">middle</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

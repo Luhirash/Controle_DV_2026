@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[223, 338, 826, 833]</P>
+  <P Name="SIDHighWatermark">39</P>
+  <Block BlockType="Inport" Name="in" SID="316::1">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="316::38">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[270, 230, 320, 270]</P>
+    <P Name="ZOrder">29</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="316::37">
+    <P Name="Tag">Stateflow S-Function 2</P>
+    <PortCounts in="1" out="2"/>
+    <P Name="Position">[180, 100, 230, 160]</P>
+    <P Name="ZOrder">28</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="PortCounts">[1 2]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">off</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <PortProperties>
+      <Port Type="out" Index="2">
+        <P Name="Name">out</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="316::39">
+    <P Name="Position">[460, 241, 480, 259]</P>
+    <P Name="ZOrder">30</P>
+  </Block>
+  <Block BlockType="Outport" Name="out" SID="316::5">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">316::1#out:1</P>
+    <P Name="Dst">316::37#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">out</P>
+    <P Name="ZOrder">22</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">316::37#out:2</P>
+    <P Name="Dst">316::5#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">316::38#out:1</P>
+    <P Name="Dst">316::39#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">316::37#out:1</P>
+    <P Name="Dst">316::38#in:1</P>
+  </Line>
+</System>
